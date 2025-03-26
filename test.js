@@ -1,0 +1,8 @@
+// .txt and .js file extension almost same both trwated as source code
+//.js does'nt have random text
+// difference between txt and js file is that which file we can inserted in a software so that it (software) executes
+// all software have capability to understand syntax structure
+// if you run txt file it will show error
+console.log("Ojas");
+
+
