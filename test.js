@@ -6,5 +6,7 @@
 // NEVER FORGET TO SAVE
 console.log("Ojas");
 console.log("Gurman");
+//lets consider we are building an ecommerce site which requires us to store the unique id and info of customer like 
+// email, mobile number etcfor this we use variables and constants
 
 
