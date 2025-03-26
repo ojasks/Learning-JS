@@ -20,5 +20,5 @@ let temp2;//undefined
 
 console.log(typeof "Ojas") //typeof and jis bhi value ka type jaan na ho
 console.log(typeof age); 
-console.log(typeof null); 
-console.log(typeof undefined); 
+console.log(typeof null); // here null is a type of object
+console.log(typeof undefined); //undefined in itself is a type
