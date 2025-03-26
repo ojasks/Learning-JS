@@ -3,6 +3,8 @@
 // difference between txt and js file is that which file we can inserted in a software so that it (software) executes
 // all software have capability to understand syntax structure
 // if you run txt file it will show error
+// NEVER FORGET TO SAVE
 console.log("Ojas");
+console.log("Gurman");
 
 
