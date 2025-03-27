@@ -1,5 +1,5 @@
 const score = 40
-const balance = new Number(100) // now the numbef will be always positive
+const balance = new Number(100) // now the numbers will be always positive
 // console.log(balance)
 // console.log(balance.toString())// now becomes a string and gaind the prop. of string
 // console.log(balance.toFixed(2))
