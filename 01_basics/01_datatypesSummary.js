@@ -13,21 +13,42 @@
 // to master js master // OBJECTS  // WEB EVENTS OF A BROWSER
 // Array, Objects , Functions
 
-const id = Symbol("123")
-const anotherId = Symbol("123")
-// Symbol data types works in a way that even if you pass the same value, the resultant values will be different
-console.log(id === anotherId)
+// const id = Symbol("123")
+// const anotherId = Symbol("123")
+// // Symbol data types works in a way that even if you pass the same value, the resultant values will be different
+// console.log(id === anotherId)
 
-// to represent bigint number put n at the end of the values
-const bignumber=3456543576654356754n
-const heroes = ["brambedkar","bhagatsingh","porus"];
-let myObj = {  
-    name: "ojas",
-    age: 20,
+// // to represent bigint number put n at the end of the values
+// const bignumber=3456543576654356754n
+// const heroes = ["brambedkar","bhagatsingh","porus"];
+// let myObj = {  
+//     name: "ojas",
+//     age: 20,
+// }
+
+// const myFunc = function(){
+//     console.log("Hello World")
+// }
+
+// console.log(typeof myFunc)// =>function object
+
+//**************************************************************************/
+//memories
+//stack(Primitive)(yaha vo bhi variable declare kiya hai uska copy milta hai) , heap(Non-Prmitive)(we get a reference)
+
+let youtubename = "ojasdotcom"
+let anothername = youtubename
+anothername = "om"
+console.log(youtubename)
+console.log(anothername)
+
+let userone = {
+    email: "usergoogle.com",
+    upi: "user@ybl"
 }
 
-const myFunc = function(){
-    console.log("Hello World")
-}
+let usertwo = userone
+usertwo.email = "ojasgoogle.com"
 
-console.log(typeof myFunc)
+console.log(userone.email)
+console.log(usertwo.email)
