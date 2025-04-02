@@ -49,7 +49,6 @@ const chai = () =>{
 const addtwo = (num1,num2) => ({username: "ojas"}) // to retun the object u need to wrap {username: "ojas"} in "( )"
 console.log(addtwo(3,4))
 
-
 // const myArr = [2,3,4,5,6]
 // myArr.forEach(function() {})  ✅
 // myArr.forEach(() => {}) ✅
