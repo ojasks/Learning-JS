@@ -21,4 +21,4 @@
 // const balance = 1000
 // if(balance>500) console.log("test"), console.log("wrong practice to write like this by giving a comma")
 
-// || && ,=,==, === , <, >,<=,>=
+// || && ,=,==, === , <, >,<=,>=, != , !==
