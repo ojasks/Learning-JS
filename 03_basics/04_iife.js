@@ -18,10 +18,11 @@
 
 // (definition)(execution)
 
-// ( function aurcode()  {
+// ( function aurcode() //named iife {
 //     console.log('DB Connected two')
 // })()
  
-( (name) =>  {
-    console.log(` DB Connected two ${name}`)
+( (name) =>  //unnamed iife
+{
+    console.log(`DB Connected two ${name}`)
 })("ooojaass")
