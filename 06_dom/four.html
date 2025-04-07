@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ojas CHAI AUR CODE</title>
+</head>
+<body style = "background-color: #6c0505; color: #fff;">
+    <ul class="language">
+    <li>javascript</li>
+</ul>
+</body>
+<script> 
+     function addlanguage(langname){
+      const li = document.createElement('li');
+      li.innerHTML = `${langname}`
+      document.querySelector('.language').appendChild(li)
+    }
+addlanguage("ojasscript")
+addlanguage("valerian")
+
+function addopti(langname){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langname))
+    document.querySelector('.language').appendChild(li)
+    // yaha pe pura ka pura tree traverse nhi karna pad rha 
+}
+addopti('ojuicescript')
+addopti("dragon toungue")
+// Edit
+const secondlang = document.querySelector("li:nth-child(2)")
+// secondlang.innerHTML = "ojSa"
+const newli = document.createElement('li')
+newli.textContent = "Gojo Satoru"
+secondlang.replaceWith(newli)
+
+// edit
+const firstlang =document.querySelector("li:first-child")
+ firstlang.outerHTML = '<li> TypeScript </li>'
+
+ // remove 
+ const lastlang = document.querySelector('li:last-child') //no space between li, : and the child defi
+ lastlang.remove()
+</script>
+</html>

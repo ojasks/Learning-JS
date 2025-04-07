@@ -52,3 +52,7 @@ usertwo.email = "ojasgoogle.com"
 
 console.log(userone.email)
 console.log(usertwo.email)
+//value of both will be changed as they are passed by reference
+
+
+
