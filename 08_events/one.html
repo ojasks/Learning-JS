@@ -22,7 +22,8 @@
     // altkey ctrlkey shiftkey, keycode 
     document.getElementById('images').addEventListener('click', function(e){
         console.log('clicked inside the ul')
-    },false)
+    },false)// yeh wala tab click hoga jab aap kisi bhi image pe click karoge whereas when you click the owl one both will be 
+    // clicked as it is inside the images one
     document.getElementById('owl').addEventListener('click', function(e){
         console.log('owl clicked')
         e.stopPropagation()// isse aapka event propogate hoke upar nhi jaayega
@@ -37,7 +38,13 @@
         console.log("google clicked"); 
     },false)
     document.getElementById('#images').addEventListener('click', function(e){
-        console.log(e.target)
+        console.log(e.target.parentNode)
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+        let removeit = e.target.parentNode
+        removeit.remove()
+        }
+        // remoneit.parentNode.removeChild(removeit)
     },false)
 </script>
 </html>
@@ -46,4 +53,40 @@
 //eventlistener
 
 
+ //event propogation ke 2 context
+ //event bubbling and eevnt capturing
+ //bubble inside out, lower to upper
+
+
+ //for default values i.e false bubbling will happen from inside out
+ // in capturing mode i.e true event capturing happens from top to bottom bubbling from outside to inside
+
+ //bubbling rokne ke liye stopPropagation()
+ //also preventDefault() to prevent the default function
+
+ // now we want to remove the images on which we click
+ //for this we will target the ul instead of each individual image id
+ // id ke liye #
+ // e.target( kis target se ye event occur ho rha hai) here the given target example id=photoshop, id=owl, id=prayer
+ // agar ab mai isse remove karna chahau toh mujhe iska parentnode lena padega which is <li></li> 
+ //kyuki dekha jaaye toh mujhe image nhi remove karni hai mujhe li remove karna hai which will be selected by the parentnode 
+// to remove it we can first store it in a variable and then simply use remove() 
+//another method to remove emoverIt.parentNode.removeChild(removeIt) we go one level more up to remove the child li
+//let removeIt = e.taget.parentNode => gives li 
+//rmeoveIt.parentNode =>gives ul
+//emoverIt.parentNode.removeChild(removeIt) => removes li
+
+//now if you click near the "google" sab kuch hi gayab hogaya
+this is because you clicked on the li, and li ka parent ul
+//etarget.parentNode => ul
+//and by using removeIt.remove(), you remove the ul so you reove all of the images //event spillover
+
+//for this we will use tagName ie img, li etc 
+//if(e.target.tagName === 'IMG'){
+    console.log(e.target.id);
+let removeit = e.target.parentNode
+removeit.remove()
+}
+and this is how we will do it
  
+
