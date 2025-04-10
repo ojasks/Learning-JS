@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: #662489; color: #97d7c7;">
+    <h1>
+        Chai AUR Code OJAS
+    </h1>
+    <button id ="stop" >STOP</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("OJASSSS")
+    // },2000)
+    const sayojas = function(){
+        console.log("ojassss")
+    } 
+    // document.querySelector("h1").innerHTML = "CURSE OF COMPETENCE" // AGAR MAI YE SAME KAAM 2 SECOND BAAD KARWANA CHAHTA HU THEN
+    const changetxt = function(){
+        document.querySelector("h1").innerHTML = "CURSE OF COMPETENCE"
+    }
+   const changeme = setTimeout(changetxt, 2000) //refernce do(sayojas) execute mat karo(sayojas()) 
+   // //when initialized with a varible will execute nevertheless
+   document.querySelector('#stop').addEventListener('click', function(){
+    clearTimeout(changeme)
+    console.log("stopped")
+   })
+</script>
+</html>
+
+
+<!-- // clear timeout and clear interval
+//handler ek function hi hai jiska naam nhi hai
+// setTimeout IS LIKE MUJHE itna time do iske baad mai aapka yeh kaam kardunga 
+// clear timeout ko chahiye refernce ki aap konse set timeout ko hatana chahae ho-->

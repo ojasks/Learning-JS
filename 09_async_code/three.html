@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: #662489; color: #97d7c7;">
+    <h1>
+        Chai AUR Javascript OJAS
+    </h1>
+    <button id ="start" >START</button>
+    <button id ="stop" >STOP</button>
+</body>
+<script>
+    // setInterval(function() {
+    //     console.log('ojassss',Date.now()) // ye event chalta hi jayega kyyuki isko rok nhi rha hai koi
+    // },1000)
+
+
+    // const wow = function(){
+    //     console.log('ojasssss',Date.now())
+    // }
+    // setInterval(wow, 2000)
+
+    // const wow = function(str){
+    //     console.log(str,Date.now())
+    // }
+    // const yuyu = setInterval(wow, 2000, 'hi')
+    // clearInterval(yuyu)
+
+    // utilize both the start and stop buttons 
+    let wow;
+    const wstart = function(str){
+        console.log(str,Date.now())
+    }
+    document.querySelector('#start').addEventListener('click', function(){
+        wow = setInterval(wstart,1000,"hello google")
+    })
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(wow)
+    })
+</script>
+</html>
