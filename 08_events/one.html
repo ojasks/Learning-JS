@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     // alert("owl clicked again")
+    //     //most times a third parameter which is true and can also be false
+    //     //puraane time pe 
+    //     //attachEvents
+    //     //jQuery - on 
+    // },false)
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget 
+    // clientX, clientY, screen X, screen Y
+    // altkey ctrlkey shiftkey, keycode 
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log('clicked inside the ul')
+    },false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log('owl clicked')
+        e.stopPropagation()// isse aapka event propogate hoke upar nhi jaayega
+    },false)
+    // when you click the owl pic in false 1. owl clicked 2. clicked inside the ul
+    //when you click the owl pic in true, 1.clicked inside the ul 2.owl clicked
+    //bubbling events
+    //capturing jaata hai top to bottom 
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault()
+        e.stopPropagation()// to prevent bubbling
+        console.log("google clicked"); 
+    },false)
+    document.getElementById('#images').addEventListener('click', function(e){
+        console.log(e.target)
+    },false)
+</script>
+</html>
+
+//onclick
+//eventlistener
+
+
+ 
