@@ -1,0 +1,41 @@
+<!-- Api is talking language between two systems
+these two systems can be frontent and backend
+// some famous api
+//   api.github.com/users/ojasks  / to access your github api 
+// randomuserme
+to read apim -> json formatter -->
+
+<!-- // xmlhttp programming -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: #300c0c; color: #fe2626;">
+    <script>
+        //first you create an object
+        const requestUrl = 'https://api.github.com/users/ojasks'
+        const xhr = new XMLHttpRequest()
+         xhr.open('GET', requestUrl)
+        //open apne me call nhi hota hai
+        //to monitor cioontinuously
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+            if(xhr.readyState === 4){
+                const data  = JSON.parse(this.responseText)
+                console.log(data.followers)
+            }
+        }
+        xhr.send()
+    </script>
+    
+</body>
+</html>
+
+<!-- //jab bhi aap pe response aata hai url se vo string ke form me hi aata hai -->
+ <!-- // it becomes objesct after json parsing it -->
+
+
