@@ -1,0 +1,90 @@
+<!-- // Lexical closures basically being that ki chote bado se maang skte hai par bade chhoto
+  se nhi maang skte also siblings dont share  this is not about people-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAI OJAS CODE</title>
+</head>
+<body>
+    
+</body style="background-color: #313131;">
+<button id= "orange">ORANGE</button>
+<button id="green">GREEN</button>
+<script>
+//     function init() {
+//   let name = "Mozilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//    displayName;
+//     }
+//init()
+
+// function outer(){
+//     let user = "ojassss"
+//     function inner(){
+//         console.log("inner :",user)
+//         //aapko yaha user ka access milega
+//     }
+//     inner()
+// }
+// outer()
+// console.log("outer :",user)
+// //yaha user ka access nhi milega
+// //aap functions me jo bhi variables declare karte ho vo outer scope me available nhi hote hai
+
+
+// till here lexical closures
+
+//from here starts closures
+
+// function makeFunc() {
+//   const name = "Mozilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName; //jab yeh return hoga toh sirf yeh function nhi jaayega iske saath poora makeFunc bhi jaayega
+//   //kyuki vo bhi isse juda hua hai
+//   //puri lexical scoping share hoti hai naa ki sirf executional context 
+//   //isse aapne yeh achieve kiya ki aap isse "console.log(name)" yeh name print krwa skte ho varna kyuki
+//   //  yeh name toh outer function me tha aur kbhi print hi nhi hota otherwise but as the whole lexical scope was shared 
+//   // the inner function when returned had with itself the outer function too which gave it a name to print 
+
+
+//   //closure me pura lexical scope hi share hota hai
+// }
+
+// const myFunc = makeFunc();
+// myFunc();
+//ek function ka scope kab tak rehta hai jab tak vo execute hota hai aur jab execute hogaya yaani khtm hogaya
+</script>
+<script>
+    // document.getElementById("orange").addEventListener('click',function(){
+    //     document.body.style.backgroundColor ='orange'
+    // })
+    // document.getElementById("green").addEventListener('click',function(){
+    //     document.body.style.backgroundColor ='green'
+    // })
+    // now what if hame 500 buttons de diye jaaye bnane ko what will we do then
+    // function clickhandler(color){
+    //      document.body.style.backgroundColor =`${color}`
+    // }
+    // document.getElementById("orange").onclick = clickhandler("orange")// agar aese likhenge toh bina click ke orange hojayega
+    // document.getElementById("green").onclick = clickhandler("green")// agar aese likhenge toh bina click ke green hojayega
+
+    function clickhandler(color){
+        // document.body.style.backgroundColor =`${color}` //yeh kaam nhi karegaa\
+        return function(){
+            document.body.style.backgroundColor =`${color}`
+        }
+        //practicality of the lexical scopes and closures 
+        //it all works beacuse we  have access to 'color' here
+        //here function() will be having acces to color dur to lexical scope giving it access to color by clickhandler(color)
+    }
+    document.getElementById("orange").onclick = clickhandler("orange")
+    document.getElementById("green").onclick = clickhandler("green")
+</script>
+</html> 
