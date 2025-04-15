@@ -127,8 +127,6 @@ This is primarily a personal learning repo. But you're welcome to:
 ### 🙌 Acknowledgements
 Thanks to the Youtube Channel:
 
----
-
 #### Chai Aur Code
 
 ---
